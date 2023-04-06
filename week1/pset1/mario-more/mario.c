@@ -21,7 +21,7 @@ int main(void)
             printf(" ");
         }
         print_pyramid(i);
-        printf(" ");
+        printf("  ");
 
         print_pyramid(i);
         printf("\n");
