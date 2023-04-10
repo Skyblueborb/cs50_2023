@@ -1,0 +1,2 @@
+1. I would definetely first see their favourite artists, which would indicate their main listening tase, then look at the averages of the energy, valence and danceability of the songs
+2. If the person listens to other platforms the results may be skewed. Maybe some systemof weighted averages.
