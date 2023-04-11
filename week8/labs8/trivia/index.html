@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Trivia!</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector("#correct")
+          .addEventListener("click", function () {
+            document.querySelector("#correct").style.backgroundColor = "green";
+            document.querySelector("#result0").innerHTML = "Correct!";
+          });
+        document
+          .querySelector("#incorrect")
+          .addEventListener("click", function () {
+            document.querySelector("#incorrect").style.backgroundColor = "red";
+            document.querySelector("#result0").innerHTML = "Incorrect!";
+          });
+        document
+          .querySelector("#incorrect2")
+          .addEventListener("click", function () {
+            document.querySelector("#incorrect2").style.backgroundColor = "red";
+            document.querySelector("#result0").innerHTML = "Incorrect!";
+          });
+        document
+          .querySelector("#submit")
+          .addEventListener("click", function () {
+            let input = document.querySelector("#question").value;
+            if (input.toLowerCase() == "fiftyville") {
+              document.querySelector("#result1").innerHTML =
+                "YES, IT IS FIFTYVILLE";
+            } else {
+              document.querySelector(
+                "#result1"
+              ).innerHTML = `NO, IT ISN\'T ${input}, IT IS FIFTYVILLE`;
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>Part 1: Multiple Choice</h2>
+        <hr />
+        <!-- TODO: Add multiple choice question here -->
+        <h3>Which language is the best?</h3>
+        <button id="correct">C</button>
+        <button id="incorrect">Python</button>
+        <button id="incorrect2">JavaScript</button>
+        <p id="result0"></p>
+      </div>
+
+      <div class="section">
+        <h2>Part 2: Free Response</h2>
+        <hr />
+        <!-- TODO: Add free response question here -->
+        <h3>What's the best problem from CS50 so far?</h3>
+        <input type="text" placeholder="Answer" id="question" />
+        <button id="submit" type="submit">Submit</button>
+        <p id="result1"></p>
+      </div>
+    </div>
+  </body>
+</html>
